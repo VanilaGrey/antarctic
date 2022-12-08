@@ -54,6 +54,13 @@
   }
 }
 
+.firstscreen .is-active + .firstscreen__promo,
+.firstscreen .no-js:focus-within + .firstscreen__promo,
+.firstscreen .no-js:hover + .firstscreen__promo {
+  margin-top: 63px;
+  opacity: 0;
+}
+
 .firstscreen__image {
   position: absolute;
   top: 0;
