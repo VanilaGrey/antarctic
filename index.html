@@ -9,10 +9,10 @@
 
 <body>
   <div class="page">
-    <div class="firstscreen page__firstscreen" [object="" Object]="">
+    <div class="firstscreen page__firstscreen">
       <div class="container">
         <header class="page-header firstscreen__header no-js" data-page-header="">
-          <a class="page-header__logo logo" aria-hidden="true">
+          <a class="logo" aria-hidden="true">
             <span class="visually-hidden">На&nbsp;главную.</span>
             <svg width="70" height="38" viewbox="0 0 70 38" role="img" focusable="false">
               <use xlink:href="img/svg/logo.svg#logo"></use>
@@ -51,6 +51,14 @@
           <h1>Круизы в&nbsp;Антарктику</h1>
           <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
         </section>
+      </div>
+      <div class="firstscreen__image">
+        <picture>
+          <source type="image/webp" media="(max-width: 320px)" srcset="img/background-header-mobile.webp 1x, img/background-header-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/background-header-tablet.webp 1x, img/background-header-tablet@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1024px)" srcset="img/background-header.webp 1x, img/background-header@2x.webp 2x">
+          <img src="img/background-header.jpg" srcset="img/background-header@2x.jpg 2x" alt="" aria-hidden="true" loading="lazy">
+        </picture>
       </div>
     </div>
 
