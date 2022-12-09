@@ -1,0 +1,16 @@
+.content {
+  @include section-paddings;
+}
+
+.content__inner {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  gap: 64px;
+  align-items: center;
+
+  h2 {
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 28px;
+  }
+}
