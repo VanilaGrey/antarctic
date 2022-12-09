@@ -1,0 +1,66 @@
+.advantages {
+  position: relative;
+  z-index: -1;
+  padding: 0;
+  background-color: $color-solitude;
+
+  @include section-paddings;
+
+  h2 {
+    margin: -10px 0 49px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  h3 {
+    margin: 0 0 9px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  p {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.advantages__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages__item {
+  padding: 30px;
+  background-color: $color-alice-blue;
+
+  @include vp-1023 {
+    padding: 26px 20px 20px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 44px;
+    height: 32px;
+    margin: 0 0 18px;
+    background-image: var(--icon);
+
+    @include vp-1023 {
+      width: 36px;
+      height: 26px;
+    }
+  }
+}
+
+.advantages__image {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}

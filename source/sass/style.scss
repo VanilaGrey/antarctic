@@ -16,7 +16,8 @@
 @import "blocks/nav";
 @import "blocks/page";
 @import "blocks/page-header";
-@import "blocks/about-trip";
+@import "blocks/content";
+@import "blocks/advantages-section";
 
 // ❗ обязательно используйте миксины hover-focus и active для отключения ховеров на тач устройствах
 // адаптив пишем внутри каждого класса

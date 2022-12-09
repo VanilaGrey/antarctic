@@ -1,0 +1,14 @@
+<section class="advantages">
+	{% include 'picture.twig' with { className: 'advantages__image', image } %}
+	<div class="container">
+		<h2 class="advantages__heading">{{ heading }}</h2>
+
+		<ul class="advantages__items">
+			{% for item in list %}
+				<li class="advantages__item" style="--icon: url('../img/sprite.svg#icon-{{ item.title }}')">
+					{{ item.content }}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
