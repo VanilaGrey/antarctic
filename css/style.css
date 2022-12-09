@@ -606,6 +606,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .firstscreen {
+  position: relative;
   color: #f9fbfd;
 }
 
@@ -643,7 +644,11 @@ input[type=number]::-webkit-inner-spin-button {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   z-index: -1;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
 }
 
 .logo {
@@ -754,6 +759,23 @@ input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
+.content {
+  padding: 120px 0;
+}
+
+.content__inner {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  gap: 64px;
+  align-items: center;
+}
+
+.content__inner h2 {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
 @media (min-width: 768px) {
   .mobile-show {
     display: none;
@@ -788,6 +810,10 @@ input[type=number]::-webkit-inner-spin-button {
 
   .page-header {
     padding: 21px 0 20px;
+  }
+
+  .content {
+    padding: 100px 0;
   }
 }
 
@@ -888,6 +914,10 @@ input[type=number]::-webkit-inner-spin-button {
   .page-header.no-js:focus-within .page-header__nav,
   .page-header.is-active .page-header__nav {
     display: block;
+  }
+
+  .content {
+    padding: 65px 0;
   }
 }
 

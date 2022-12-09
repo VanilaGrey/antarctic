@@ -10,6 +10,12 @@
 <body>
   <div class="page">
     <div class="firstscreen page__firstscreen">
+      <picture>
+        <source type="image/webp" media="(max-width: 320px)" srcset="img/background-header-mobile.webp 1x, img/background-header-mobile@2x.webp 2x">
+        <source type="image/webp" media="(max-width: 1023px)" srcset="img/background-header-tablet.webp 1x, img/background-header-tablet@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 1024px)" srcset="img/background-header.webp 1x, img/background-header@2x.webp 2x">
+        <img class="firstscreen__image" src="img/background-header.jpg" srcset="img/background-header@2x.jpg 2x" alt="" aria-hidden="true" loading="lazy">
+      </picture>
       <div class="container">
         <header class="page-header firstscreen__header no-js" data-page-header="">
           <a class="logo" aria-hidden="true">
@@ -52,17 +58,26 @@
           <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
         </section>
       </div>
-      <div class="firstscreen__image">
-        <picture>
-          <source type="image/webp" media="(max-width: 320px)" srcset="img/background-header-mobile.webp 1x, img/background-header-mobile@2x.webp 2x">
-          <source type="image/webp" media="(max-width: 1023px)" srcset="img/background-header-tablet.webp 1x, img/background-header-tablet@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 1024px)" srcset="img/background-header.webp 1x, img/background-header@2x.webp 2x">
-          <img src="img/background-header.jpg" srcset="img/background-header@2x.jpg 2x" alt="" aria-hidden="true" loading="lazy">
-        </picture>
-      </div>
     </div>
 
     <main>
+
+      <section class="content">
+        <div class="content__inner container">
+          <div>
+            <h2>Путешествие на&nbsp;край Земли</h2>
+            <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики.
+              Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги,
+              несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 320px)" srcset="img/about-mobile.webp 1x, img/about-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/about-tablet.webp 1x, img/about-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/about.webp 1x, img/about@2x.webp 2x">
+            <img src="img/about.jpg" srcset="img/about@2x.jpg 2x" alt="Пингвины на снегу." loading="lazy">
+          </picture>
+        </div>
+      </section>
     </main>
   </div>
   <script src="js/vendor.min.js"></script>
