@@ -2,7 +2,7 @@
   position: relative;
   color: $color-alice-blue;
   background-color: $color-tangaroa;
-  z-index: -2;
+  z-index: 0;
 }
 
 .firstscreen__promo {
@@ -61,7 +61,6 @@
 .firstscreen .is-active + .firstscreen__promo,
 .firstscreen .no-js:focus-within + .firstscreen__promo,
 .firstscreen .no-js:hover + .firstscreen__promo {
-  margin-top: 63px;
   opacity: 0;
 }
 

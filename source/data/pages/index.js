@@ -1,3 +1,24 @@
+const pageData = {
+  maps: {
+    contactsMap: {
+      initials: {
+        center: [59.938635, 30.323118],
+        controls: [],
+        zoom: 16,
+      },
+      placemark: [
+        {hintContent: 'г. Санкт Петербург, ул. Большая Конюшенная, 19/8'},
+        {
+          iconImageHref: 'img/sprite.svg#icon-pin',
+          iconImageSize: [18, 22],
+          iconLayout: 'default#image',
+          iconShadow: false,
+        },
+      ],
+    },
+  },
+};
+
 export const getImages = (filename, additions = {}, useTablet = true, useMobile = true) => {
   const image = Object.assign(additions, {
     default: `img/${filename}.jpg`,
@@ -20,6 +41,7 @@ export const getImages = (filename, additions = {}, useTablet = true, useMobile 
 };
 
 export default {
+  pageData: JSON.stringify(pageData),
   promo: {
     content: `<h1>Круизы в Антарктику</h1>
       <p>Волшебный мир айсбергов и пингвинов</p>`,
@@ -35,6 +57,7 @@ export default {
     }),
   },
   advantages: {
+    id: 'advantages',
     heading: 'Преимущества',
     list: [
       {
@@ -163,5 +186,57 @@ export default {
       url: '#!',
     })),
     linkText: 'Забронировать',
+  },
+  order: {
+    image: getImages('background-form'),
+    content: `<h2>Раннее бронирование</h2>
+      <p>Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>`,
+    form: {
+      action: 'https://echo.htmlacademy.ru',
+      description: 'Оставьте заявку и мы свяжемся с вами в ближайшее время',
+      fields: [
+        `<input
+        id="order-name"
+        name="name"
+        type="text"
+        placeholder="Имя"
+        pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
+        required
+        />
+        <strong>Пожалуйста, введите полностью ФИО без сокращений</strong>
+        <label for="order-name">Имя</label>`,
+        `<input id="order-phone" name="phone" type="tel" placeholder="Телефон" pattern="^\\+?\\d{7,13}$" required />
+        <strong>Введите от 7 до 13 цифр</strong>
+        <label for="order-phone">Телефон</label>`,
+        `<input id="order-email" name="email" type="email" placeholder="Email" required />
+        <strong>Введите корректный E-mail</strong>
+        <label for="order-email">Email</label>`,
+        `<label>
+        <input name="agree" type="checkbox" checked required />
+        <span>Я согласен на обработку моих&nbsp;персональных&nbsp;данных</span>
+        <strong>Согласие на обработку обязательно</strong>
+        </label>`,
+      ],
+      method: 'post',
+      submitText: 'Оставить заявку',
+    },
+  },
+  contacts: {
+    id: 'contacts',
+    content: `<h2>Контакты</h2>
+      <p><b>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</b></p>
+      <p>
+        <img src="img/sprite.svg#icon-pin" width="18" height="22" alt="" aria-hidden="true" />
+        г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8
+      </p>
+      <p>
+        <img src="img/sprite.svg#icon-tel" width="18" height="18" alt="" aria-hidden="true" />
+        <a href="tel:+78002000000">8-800-200-00-00</a>
+      </p>`,
+    headless: true,
+    map: {
+      id: 'contactsMap',
+      image: getImages('map', {alt: 'Адрес на карте.'}, false, false),
+    },
   },
 };

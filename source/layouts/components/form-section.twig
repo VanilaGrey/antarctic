@@ -1,0 +1,10 @@
+<section class="form-section">
+{% include 'picture.twig' with { className: 'form-section__image', image } %}
+	<div class="form-section__inner container">
+		<div class="form-section__content">
+			{{ content }}
+		</div>
+
+		{% include 'form.twig' with form|merge({ bemMix: 'form-section__form' }) %}
+	</div>
+</section>

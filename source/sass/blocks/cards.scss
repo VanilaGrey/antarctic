@@ -38,6 +38,7 @@
 
   @include vp-599 {
     grid-template-columns: minmax(270px, 309px);
+    padding: 0 10px;
   }
 }
 
@@ -53,7 +54,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
 }
 

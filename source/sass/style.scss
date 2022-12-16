@@ -19,6 +19,11 @@
 @import "blocks/content";
 @import "blocks/advantages-section";
 @import "blocks/cards";
+@import "blocks/form-section";
+@import "blocks/form";
+@import "blocks/map-section";
+@import "blocks/socials";
+@import "blocks/page-footer";
 
 // ❗ обязательно используйте миксины hover-focus и active для отключения ховеров на тач устройствах
 // адаптив пишем внутри каждого класса

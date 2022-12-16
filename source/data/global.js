@@ -1,4 +1,5 @@
 export default {
+  pageData: '{}',
   description: 'Сайт по организации туров в Антарктику.',
   projectName: 'Антарктика',
   navLinks: [
@@ -22,6 +23,7 @@ export default {
   socials: [
     {
       id: 'ok',
+      narrow: true,
       title: 'Мы в Одноклассниках.',
       url: '#!',
     },
