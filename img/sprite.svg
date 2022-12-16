@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg"><style>:root svg:not(:target){display:none}</style><svg viewBox="0 0 24 14" fill="none" id="icon-burger">
 <path d="M0 1H24M0 7H24M0 13H24" stroke="#F9FBFD" stroke-width="2"></path>
+</svg><svg viewBox="0 0 12 8" fill="none" id="icon-check">
+<path d="M1 2.5L5.28571 7L11 1" stroke="#101A56"></path>
 </svg><svg viewBox="0 0 15 15" fill="none" id="icon-close">
 <path d="M1 1L7.5 7.5M14 14L7.5 7.5M7.5 7.5L14 1L1 14" stroke="#011C40" stroke-width="2"></path>
 </svg><svg viewBox="0 0 20 20" fill="none" id="icon-dzen">
