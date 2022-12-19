@@ -182,7 +182,7 @@ export default {
     ].map(({content, heading}, i) => ({
       content,
       heading,
-      image: getImages(`offer-${i > 8 ? 2 : i + 1}`, {alt: `${heading}.`}, false, false),
+      image: getImages(`offer-${i > 6 ? 2 : i + 1}`, {alt: `${heading}.`}, false, false),
       url: '#!',
     })),
     linkText: 'Забронировать',

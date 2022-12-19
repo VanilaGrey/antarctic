@@ -1,4 +1,4 @@
-<section class="advantages">
+<section class="advantages" {{ id ? 'id="' ~ id ~ '"' }}>
 	{% include 'picture.twig' with { className: 'advantages__image', image } %}
 	<div class="container">
 		<h2 class="advantages__heading">{{ heading }}</h2>

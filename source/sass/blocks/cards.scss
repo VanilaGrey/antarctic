@@ -1,5 +1,13 @@
 .cards {
   @include section-paddings;
+
+  @include vp-1023 {
+    padding: 101px 0 100px; //pixelperfect
+  }
+
+  @include vp-767 {
+    padding: 62px 0 65px;
+  }
 }
 
 .cards__heading {
