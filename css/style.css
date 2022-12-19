@@ -689,7 +689,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .nav__link {
   display: block;
-  margin: 0 0 0 34px;
+  margin: 0 0 0 33px;
   padding: 10px 0;
   font-weight: 500;
   transition: opacity 0.3s ease;
@@ -1152,7 +1152,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .map-section__iconable p b:only-child {
   display: block;
-  margin-bottom: 11px;
+  margin: -2px 0 11px;
   font-weight: 500;
   font-size: 18px;
 }
@@ -1174,6 +1174,10 @@ input[type=number]::-webkit-inner-spin-button {
 .map-section__iconable img {
   flex-shrink: 0;
   margin-right: 10px;
+}
+
+.map-section__iconable img:nth-last-child(2) {
+  margin-top: 2px;
 }
 
 .map-section__iconable a {
@@ -1238,7 +1242,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .page-footer {
-  padding: 50px 0;
+  padding: 49px 0;
   color: #f9fbfd;
   background-color: #011c40;
 }
@@ -1344,16 +1348,21 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .advantages__item {
-    padding: 26px 18px 3px;
+    padding: 28px 18px 3px;
   }
 
   .advantages__item::before {
     width: 36px;
     height: 26px;
+    margin: 0 0 15px;
   }
 
   .cards {
     padding: 100px 0;
+  }
+
+  .cards {
+    padding: 101px 0 100px;
   }
 
   .cards__heading {
@@ -1379,7 +1388,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .form-section {
-    padding: 99px 0;
+    padding: 99px 0 100px;
   }
 
   .form-section__inner {
@@ -1405,7 +1414,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .map-section {
-    padding: 103px 0;
+    padding: 103px 0 102px;
   }
 
   .map-section__inner {
@@ -1435,11 +1444,15 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .map-section__iconable p b:only-child {
-    margin: -7px 0 6px;
+    margin: -9px 0 6px;
   }
 
   .map-section__iconable img {
-    margin-top: 4px;
+    margin-top: 5px;
+  }
+
+  .map-section__iconable img:nth-last-child(2) {
+    margin-top: 2px;
   }
 
   .socials__link {
@@ -1599,8 +1612,16 @@ input[type=number]::-webkit-inner-spin-button {
     grid-template-columns: 1fr;
   }
 
+  .advantages__item {
+    padding: 28px 18px 5px;
+  }
+
   .cards {
     padding: 65px 0;
+  }
+
+  .cards {
+    padding: 62px 0 65px;
   }
 
   .cards__heading {
@@ -1622,7 +1643,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .form-section {
-    padding: 66px 0;
+    padding: 66px 0 65px;
   }
 
   .form-section__inner {
@@ -1677,7 +1698,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .map-section {
-    padding: 63px 0 39px;
+    padding: 63px 0 38px;
   }
 
   .map-section__inner {
@@ -1702,7 +1723,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .map-section__iconable p b:only-child {
-    margin-top: -7px;
+    margin-top: -5px;
   }
 
   .page-footer {
@@ -1728,6 +1749,10 @@ input[type=number]::-webkit-inner-spin-button {
   .cards__items {
     grid-template-columns: minmax(270px, 309px);
     padding: 0 10px;
+  }
+
+  .map-section__iconable img:nth-last-child(2) {
+    margin-top: 2px;
   }
 }
 
