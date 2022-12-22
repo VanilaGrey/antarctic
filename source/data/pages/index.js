@@ -205,7 +205,7 @@ export default {
         />
         <strong>Пожалуйста, введите полностью ФИО без сокращений</strong>
         <label for="order-name">Имя</label>`,
-        `<input id="order-phone" name="phone" type="tel" placeholder="Телефон" pattern="^\\+?\\d{7,13}$" required />
+        `<input id="order-phone" name="phone" type="tel" placeholder="Телефон" pattern="^\\+?[\\d ()-]+$" required />
         <strong>Введите от 7 до 13 цифр</strong>
         <label for="order-phone">Телефон</label>`,
         `<input id="order-email" name="email" type="email" placeholder="Email" required />

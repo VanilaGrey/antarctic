@@ -1,5 +1,6 @@
 <section class="map-section" {{ id ? 'id="' ~ id ~ '"' }}>
 	<div class="map-section__inner container">
+
 		{% if map %}
 			<div class="map-section__map map" id="{{ map.id }}" data-map>
 				{% include 'picture.twig' with map.image %}
@@ -7,6 +8,7 @@
 		{% else %}
 			{% include 'picture.twig' with image %}
 		{% endif %}
+
 		<div class="map-section__iconable">
 			{{ content }}
 		</div>
