@@ -633,6 +633,7 @@ input[type=number]::-webkit-inner-spin-button {
 .firstscreen .is-active + .firstscreen__promo,
 .firstscreen .no-js:focus-within + .firstscreen__promo,
 .firstscreen .no-js:hover + .firstscreen__promo {
+  margin-top: 63px;
   opacity: 0;
 }
 
@@ -648,6 +649,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .logo {
+  align-self: flex-start;
+  margin-top: 8px;
   transition: opacity 0.3s ease;
   --color: currentColor;
   width: 70px;
@@ -749,6 +752,10 @@ input[type=number]::-webkit-inner-spin-button {
   mask: url("../img/sprite.svg#icon-burger") no-repeat center/100%;
 }
 
+.page-header__nav {
+  max-width: 630px;
+}
+
 .page-header__nav-list {
   justify-content: flex-end;
   margin: 0;
@@ -778,6 +785,10 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .content__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   margin: auto;
 }
 
@@ -873,6 +884,8 @@ input[type=number]::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .cards__content {
@@ -895,22 +908,18 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .cards__content h4 {
-  display: none;
   margin: 0;
   font-weight: 500;
   font-size: 14px;
 }
 
 .cards__content p {
-  display: none;
   margin: 0 0 10px;
   font-size: 14px;
   line-height: 20px;
-  color: #d8d8d9;
 }
 
 .cards__btn {
-  display: none;
   margin-top: 15px;
 }
 
@@ -921,7 +930,17 @@ input[type=number]::-webkit-inner-spin-button {
 
 .cards__item:hover img,
 .cards__item:focus-within img {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
 }
 
 .cards__item:hover h3,
@@ -929,13 +948,20 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0 0 14px;
 }
 
-.cards__item:hover h4,
-.cards__item:hover p,
-.cards__item:hover .cards__btn,
-.cards__item:focus-within h4,
-.cards__item:focus-within p,
-.cards__item:focus-within .cards__btn {
-  display: block;
+.cards__item:not(:hover):not(:focus-within) h4,
+.cards__item:not(:hover):not(:focus-within) p,
+.cards__item:not(:hover):not(:focus-within) .cards__btn {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
 }
 
 .form-section {
@@ -1031,6 +1057,17 @@ input[type=number]::-webkit-inner-spin-button {
   -moz-user-select: none;
   user-select: none;
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.form__group [type=checkbox]:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .form__group [type=checkbox].focus-visible:focus {
+    opacity: 0.8;
+  }
 }
 
 .form__group [type=checkbox]:checked::before {
@@ -1264,6 +1301,13 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 
+@media (min-width: 1920px) {
+  .firstscreen__image {
+    -o-object-position: 50% 60%;
+    object-position: 50% 60%;
+  }
+}
+
 @media (max-width: 1023px) {
   .firstscreen__promo {
     min-height: 560px;
@@ -1282,6 +1326,7 @@ input[type=number]::-webkit-inner-spin-button {
 
   .logo {
     width: 38px;
+    margin-top: 0;
   }
 
   .nav {
@@ -1493,6 +1538,7 @@ input[type=number]::-webkit-inner-spin-button {
 
   .logo {
     width: 42px;
+    margin-top: 0;
   }
 
   .nav {
@@ -1620,7 +1666,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .cards__items {
-    grid-template-columns: repeat(2, minmax(270px, 309px));
+    grid-template-columns: repeat(2, minmax(260px, 309px));
   }
 
   .cards__content {
@@ -1790,6 +1836,17 @@ input[type=number]::-webkit-inner-spin-button {
   .form__group input:not([type=checkbox]):hover,
   .form__group input:not([type=checkbox]):hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .form__group [type=checkbox]:hover,
+  .form__group [type=checkbox]:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .form__group [type=checkbox]:active,
+  .form__group [type=checkbox]:hover:active,
+  .form__group [type=checkbox].focus-visible:active {
+    opacity: 0.5;
   }
 
   .form__group label:hover,
