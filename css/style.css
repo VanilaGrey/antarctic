@@ -630,13 +630,6 @@ input[type=number]::-webkit-inner-spin-button {
   line-height: 24px;
 }
 
-.firstscreen .is-active + .firstscreen__promo,
-.firstscreen .no-js:focus-within + .firstscreen__promo,
-.firstscreen .no-js:hover + .firstscreen__promo {
-  margin-top: 63px;
-  opacity: 0;
-}
-
 .firstscreen__image {
   position: absolute;
   top: 0;
@@ -753,17 +746,12 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .page-header__nav {
-  max-width: 630px;
+  width: 90%;
 }
 
 .page-header__nav-list {
   justify-content: flex-end;
   margin: 0;
-}
-
-.page-header.no-js:hover .page-header__toggler,
-.page-header.no-js:focus-within .page-header__toggler {
-  display: none;
 }
 
 .content {
@@ -1521,6 +1509,18 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 0 15px;
   }
 
+  .firstscreen .is-active + .firstscreen__promo {
+    margin-top: 63px;
+    opacity: 0;
+  }
+
+  .firstscreen .no-js + .firstscreen__promo {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
   .firstscreen__promo {
     min-height: 437px;
     padding: 30px 0 96px;
@@ -1583,8 +1583,21 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 32px;
   }
 
-  .page-header.no-js:hover,
-  .page-header.no-js:focus-within,
+  .page-header.no-js,
+  .page-header.is-active {
+    color: #011c40;
+    background-color: #f9fbfd;
+  }
+
+  .page-header.no-js .page-header__nav,
+  .page-header.is-active .page-header__nav {
+    display: block;
+  }
+
+  .page-header.no-js .page-header__toggler {
+    display: none;
+  }
+
   .page-header.is-active {
     position: fixed;
     top: 0;
@@ -1594,25 +1607,15 @@ input[type=number]::-webkit-inner-spin-button {
     align-items: flex-start;
     width: calc(100% - 35px);
     overflow-y: auto;
-    color: #011c40;
-    background-color: #f9fbfd;
     box-shadow: -35px 0 0 rgba(0, 43, 102, 0.5);
     transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .page-header.no-js:hover .page-header__toggler::before,
-  .page-header.no-js:focus-within .page-header__toggler::before,
   .page-header.is-active .page-header__toggler::before {
     width: 13px;
     margin-left: auto;
     -webkit-mask: url("../img/sprite.svg#icon-close") no-repeat center/100%;
     mask: url("../img/sprite.svg#icon-close") no-repeat center/100%;
-  }
-
-  .page-header.no-js:hover .page-header__nav,
-  .page-header.no-js:focus-within .page-header__nav,
-  .page-header.is-active .page-header__nav {
-    display: block;
   }
 
   .content {
