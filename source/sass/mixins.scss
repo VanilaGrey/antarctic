@@ -113,3 +113,7 @@
     padding: 65px 0;
   }
 }
+
+@mixin shadow($radius: 35px) {
+  box-shadow: 0 4px $radius rgba($color-tangaroa, 0.15);
+}

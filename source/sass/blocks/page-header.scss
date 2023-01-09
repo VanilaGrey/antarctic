@@ -45,6 +45,8 @@
 }
 
 .page-header__nav {
+  max-width: 630px;
+
   @include vp-767 {
     display: none;
     width: 100%;

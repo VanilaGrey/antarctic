@@ -1,4 +1,7 @@
 .logo {
+  align-self: flex-start;
+  margin-top: 8px;
+
   @include default-interactive;
 
   --color: currentColor;
@@ -6,10 +9,12 @@
 
   @include vp-1023 {
     width: 38px;
+    margin-top: 0;
   }
 
   @include vp-767 {
     width: 42px;
+    margin-top: 0;
   }
 
   &:not([href]) {
