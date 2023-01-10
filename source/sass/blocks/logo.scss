@@ -1,6 +1,6 @@
 .logo {
   align-self: flex-start;
-  margin-top: 8px;
+  margin-top: 0;
 
   @include default-interactive;
 
@@ -9,7 +9,7 @@
 
   @include vp-1023 {
     width: 38px;
-    margin-top: 0;
+    margin-top: 9px;
   }
 
   @include vp-767 {
