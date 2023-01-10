@@ -643,7 +643,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .logo {
   align-self: flex-start;
-  margin-top: 8px;
+  margin-top: 0;
   transition: opacity 0.3s ease;
   --color: currentColor;
   width: 70px;
@@ -1314,7 +1314,7 @@ input[type=number]::-webkit-inner-spin-button {
 
   .logo {
     width: 38px;
-    margin-top: 0;
+    margin-top: 9px;
   }
 
   .nav {
